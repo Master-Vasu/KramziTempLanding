@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-kramzi-purple: #5d3891;
+  --color-kramzi-purple-dark: #3d2066;
+  --color-kramzi-purple-light: #6b37bf;
+  --color-kramzi-pink: #d8a7b1;
+  --color-kramzi-pink-light: #e8b4bc;
+  --color-kramzi-lavender: #e6e0f3;
+  --color-kramzi-announcement: #f3e4f0;
+  --color-kramzi-hero-dark: #3d2a35;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.split-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.split-image-color,
+.split-image-gray {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-image-color {
+  clip-path: inset(0 50% 0 0);
+}
+
+.split-image-gray {
+  filter: grayscale(100%);
+  clip-path: inset(0 0 0 50%);
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-enter {
+  animation: slide-up 0.3s ease-out;
+}
+
+@keyframes page-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-from-top {
+  animation: page-from-top 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-fade-in {
+  animation: page-fade-in 0.25s ease-out both;
+}
+
+
