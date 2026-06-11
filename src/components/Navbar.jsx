@@ -18,13 +18,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50">
       <nav className="bg-gradient-to-r from-kramzi-purple-dark via-kramzi-purple to-kramzi-purple-light px-4 py-3 md:px-8">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <Link to="/" className="text-white">
-            <div className="font-serif text-2xl font-semibold leading-tight tracking-wide md:text-3xl">
-              kramzi
-            </div>
-            <div className="text-[10px] font-medium tracking-[0.25em] text-white/90 md:text-xs">
-              ESSENTIALS
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/images/kramzi-logo.png" 
+              alt="Kramzi Essentials" 
+              className="h-10 md:h-12 w-auto object-contain" 
+            />
           </Link>
 
           <ul className="hidden items-center gap-8 md:flex">
